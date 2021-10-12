@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <style>
+      .swiper {
+        width: 100%;
+        height: 500px;
+      }
+      .swiper-pagination-bullet-active {
+        opacity: var(--swiper-pagination-bullet-opacity, 1);
+        background: #bb2424af !important;
+      }
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal,
+      .swiper-pagination-custom,
+      .swiper-pagination-fraction {
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+      }
+    </style>
+
+    <title>Guma Protection</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Guma Protection</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Features</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact us</a>
+            </li>
+
+            <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+
+        <a
+          href="./login.html"
+          style="color: whitesmoke"
+          class="button button__header"
+          >Sign In</a
+        >
+      </nav>
+    </header>
+
+    <main class="main">
+      <!--=============== HOME ===============-->
+
+      <section class="home section" id="home">
+        <!-- SWIPER -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="home__container container grid">
+                <div class="home__svg__img" style="order: 2">
+                  <img src="./assets/img/slide3.svg" alt="" />
+                </div>
+
+                <div class="home__data" style="order: 1">
+                  <h1 class="home__title">
+                    Guma <br />
+                    Protection
+                  </h1>
+                  <p class="home__description">Guma Dynamic App</p>
+
+                  <a href="#" style="color: whitesmoke" class="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="home__container container grid">
+                <div class="home__svg__img" style="order: 2">
+                  <img src="./assets/img/slide1.svg" alt="" />
+                </div>
+
+                <div class="home__data" style="order: 1">
+                  <h1 class="home__title">
+                    Guma <br />
+                    Protection
+                  </h1>
+                  <p class="home__description">
+                    App that has all your security service
+                  </p>
+
+                  <a href="#" style="color: whitesmoke" class="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="home__container container grid">
+                <div class="home__svg__img" style="order: 2">
+                  <img src="./assets/img/slide2.svg" alt="" />
+                </div>
+
+                <div class="home__data" style="order: 1">
+                  <h1 class="home__title">
+                    Guma <br />
+                    Protection
+                  </h1>
+                  <p class="home__description">
+                    Switch to Guma protection service
+                  </p>
+
+                  <a href="#" style="color: whitesmoke" class="button"
+                    >Get Started</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End of slides -->
+          <!-- If we need pagination -->
+          <div style="color: brown !important" class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+        </div>
+      </section>
+      <!-- Slider main container -->
+
+      <!--=============== OB ===============-->
+      <section class="about section container" id="about">
+        <div class="about__container grid">
+          <div class="home__svg__img">
+            <img src="./assets/img/chat.svg" alt="" />
+          </div>
+          <div class="about__data">
+            <h2 class="section__title-center">Electronic Occurrence Book</h2>
+            <p class="about__description">
+              Electronic OB allows easy capturing of occurrence data for
+              security officers and supervisors electronically
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== VEC ===============-->
+      <section class="security section container">
+        <div class="security__container grid">
+          <div class="security__data">
+            <h2 class="section__title-center">Clocking System</h2>
+            <p class="security__description">
+              Employees Clocking system allows employees to log their shift,
+              track work hours, and report overtime. It's an efficient way of
+              tracking time management , managing attendance
+            </p>
+          </div>
+          <div class="home__svg__img">
+            <img src="./assets/img/time.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!--=============== VEC ===============-->
+      <section class="security section container">
+        <div class="security__container grid">
+          <div class="home__svg__img">
+            <img src="./assets/img/visitor.svg" alt="" />
+          </div>
+          <div class="security__data">
+            <h2 class="section__title-center">Visitor entry control</h2>
+            <p class="security__description">
+              Visitors entry control enables pedestrian and visitors vehicle
+              information to a residential or business complex to be captured
+              and stored electronically.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== ETM ===============-->
+      <section class="security section container">
+        <div class="security__container grid">
+          <div class="security__data">
+            <h2 class="section__title-center">Employee Task management</h2>
+            <p class="security__description">
+              Employees task manager allows security guards and Guma support
+              stuff to manage their everyday to-do lists in the most efficient
+              manner.
+            </p>
+          </div>
+          <div class="home__svg__img">
+            <img src="./assets/img/task.svg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!--=============== ET ===============-->
+      <section class="security section container">
+        <div class="security__container grid">
+          <div class="home__svg__img">
+            <img src="./assets/img/train.svg" alt="" />
+          </div>
+          <div class="security__data">
+            <h2 class="section__title-center">
+              Employee Training & Knowledge Centre
+            </h2>
+            <p class="security__description">
+              Guma knowledge hub, aims at continuous training and development of
+              of security guards and stuff to boost the performance and skills
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== CONTACT US ===============-->
+      <section class="contact section container" id="contact">
+        <div class="contact__container grid">
+          <div class="contact__content">
+            <h2 class="section__title-center">
+              Contact Us From <br />
+              Here
+            </h2>
+            <p class="contact__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              reiciendis consequuntur ratione dolor minus ipsam mollitia earum
+              ullam, alias sit omnis perferendis aperiam et ad eligendi, quis
+              eveniet! Quam, qui?
+            </p>
+          </div>
+
+          <ul class="contact__content grid">
+            <li class="contact__address">
+              Telephone:
+              <span class="contact__information"
+                >84 4023 270/ 078 2237 629</span
+              >
+            </li>
+            <li class="contact__address">
+              Email:
+              <span class="contact__information"
+                >Documents@gumaprotection.co.za</span
+              >
+            </li>
+            <li class="contact__address">
+              Location: <span class="contact__information">test - test</span>
+            </li>
+          </ul>
+
+          <div class="contact__content">
+            <a href="#" style="color: whitesmoke" class="button">Contact Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+      <div class="footer__container container grid">
+        <div class="footer__content">
+          <a href="#" class="footer__logo">Guma Protection</a>
+          <p class="footer__description">
+            lorem lorem <br />
+            lorem
+          </p>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Our Services</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Pricing </a></li>
+            <li><a href="#" class="footer__link">Discounts</a></li>
+            <li><a href="#" class="footer__link">Report a bug</a></li>
+            <li><a href="#" class="footer__link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Our Company</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Get in touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Community</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Support</a></li>
+            <li><a href="#" class="footer__link">Questions</a></li>
+            <li><a href="#" class="footer__link">Customer help</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <a href="#" class="footer__social-link"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+        </div>
+      </div>
+
+      <p class="footer__copy">&#169; SwaartWare</p>
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup__icon"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script>
+  </body>
+</html>

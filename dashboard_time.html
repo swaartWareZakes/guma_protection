@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guma Protection</title>
+    <link rel="shortcut icon" href="./assets/img/logo1.jpeg" type="image/png" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOXICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="">
+      <div class="sidebar-logo">
+        <!-- <img src="./assets/img/logo2.jpeg" alt="Comapny logo" /> -->
+        <h2 style="color: #2980b9; font-family: cursive">Dynamic App</h2>
+        <div class="sidebar-close" id="sidebar-close">
+          <i class="bx bx-left-arrow-alt"></i>
+        </div>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <img
+            src="./assets/img/user-image-2.png"
+            alt="User picture"
+            class="profile-image"
+          />
+          <div class="sidebar-user-name">John Doe</div>
+        </div>
+        <button class="btn btn-outline">
+          <i class="bx bx-log-out bx-flip-horizontal"></i>
+        </button>
+      </div>
+      <!-- SIDEBAR MENU -->
+      <ul class="sidebar-menu">
+        <li>
+          <a href="./dashboard.html">
+            <i class="bx bx-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#" onclick="toggleVisibility('generalReports');">
+            <i class="bx bxs-file-doc"></i>
+            <span>General Reports</span>
+          </a>
+        </li> -->
+        <li>
+          <a href="./dashboard_time.html" class="active">
+            <i class="bx bx-timer"></i>
+            <span>Time On Duty</span>
+          </a>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-book"></i>
+            <span>WORKSPACES</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="./occrancereports.html">
+                <i class="bx bx-chat"></i>
+                <span>Occurance Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-lock-alt"></i>
+                <span>Visitor entry control </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bxs-watch-alt"></i>
+                <span>Clocking System</span>
+              </a>
+            </li>
+            <li>
+              <a href="./generalreports.html">
+                <i class="bx bxs-file-doc"></i>
+                <span>General Reports</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bxs-book-reader"></i>
+            <span>KNOWLEDGE CENTRE </span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="#">
+                <i class="bx bxs-graduation"></i>
+                <span>Employees training and knowledge hub</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-user-circle"></i>
+            <span>Account</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="./createaccount.html"> Create Account </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-calendar"></i>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="./sites.html" onclick="toggleVisibility('sites');">
+            <i class="bx bx-building-house"></i>
+            <span>Sites</span>
+          </a>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-cog"></i>
+            <span>settings</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="#" class="darkmode-toggle" id="darkmode-toggle">
+                darkmode
+                <span class="darkmode-switch"></span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+
+    <!-- Time CONTENT -->
+    <div class="main" id="timeDuty">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title time">Time On Duty</div>
+      </div>
+      <div class="main-content">
+        <div class="row">
+          <div class="col-6 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Clocked In</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bx-calendar"></i>
+                </div>
+              </div>
+            </div>
+            <input
+              type="submit"
+              style="background-color: teal"
+              value="Clock In"
+            />
+          </div>
+          <div class="col-6 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Time</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bxs-watch-alt"></i>
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Clock Out" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <div class="box-header">Add Image</div>
+              <div class="box-body">
+                <form id="form" action="post">
+                  <br />
+
+                  <div class="file-upload">
+                    <div class="file-upload-select">
+                      <div class="file-select-button">Choose File</div>
+                      <div class="file-select-name">No file chosen...</div>
+                      <input
+                        type="file"
+                        name="file-upload-input"
+                        id="file-upload-input"
+                      />
+                    </div>
+                  </div>
+                  <br />
+
+                  <!-- <input
+                    type="submit"
+                    value="Add Book"
+                    class="btn btn-primary btn-block"
+                  /> -->
+                </form>
+
+                <img
+                  src="./assets/img/user-image-2.png"
+                  alt="Avatar"
+                  style="
+                    width: 500px;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin-left: 283px;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Time CONTENT -->
+
+    <div class="overlay"></div>
+
+    <!-- SCRIPT -->
+    <!-- APEX CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      var selector = '.sidebar ul li a';
+
+      $(selector).on('click', function () {
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+      });
+
+      function hideShowForm() {
+        var x = document.getElementById('accountForm');
+        if (x.style.display === 'none') {
+          x.style.display = 'block';
+        } else {
+          x.style.display = 'none';
+        }
+      }
+    </script>
+
+    <!-- APP JS -->
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

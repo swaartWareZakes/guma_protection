@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guma Protection</title>
+    <link rel="shortcut icon" href="./assets/img/logo1.jpeg" type="image/png" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOXICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="">
+      <div class="sidebar-logo">
+        <!-- <img src="./assets/img/logo2.jpeg" alt="Comapny logo" /> -->
+        <h2 style="color: #2980b9; font-family: cursive">Dynamic App</h2>
+        <div class="sidebar-close" id="sidebar-close">
+          <i class="bx bx-left-arrow-alt"></i>
+        </div>
+      </div>
+      <div class="sidebar-user">
+        <div class="sidebar-user-info">
+          <img
+            src="./assets/img/user-image-2.png"
+            alt="User picture"
+            class="profile-image"
+          />
+          <div class="sidebar-user-name">John Doe</div>
+        </div>
+        <button class="btn btn-outline">
+          <i class="bx bx-log-out bx-flip-horizontal"></i>
+        </button>
+      </div>
+      <!-- SIDEBAR MENU -->
+      <ul class="sidebar-menu">
+        <li>
+          <a href="./dashboard.html" class="active">
+            <i class="bx bx-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#" onclick="toggleVisibility('generalReports');">
+            <i class="bx bxs-file-doc"></i>
+            <span>General Reports</span>
+          </a>
+        </li> -->
+        <li>
+          <a href="./dashboard_time.html">
+            <i class="bx bx-timer"></i>
+            <span>Time On Duty</span>
+          </a>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-book"></i>
+            <span>WORKSPACES</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="./occrancereports.html">
+                <i class="bx bx-chat"></i>
+                <span>Occurance Reports</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-lock-alt"></i>
+                <span>Visitor entry control </span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bxs-watch-alt"></i>
+                <span>Clocking System</span>
+              </a>
+            </li>
+            <li>
+              <a href="./generalreports.html">
+                <i class="bx bxs-file-doc"></i>
+                <span>General Reports</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bxs-book-reader"></i>
+            <span>KNOWLEDGE CENTRE </span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="#">
+                <i class="bx bxs-graduation"></i>
+                <span>Employees training and knowledge hub</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-user-circle"></i>
+            <span>Account</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="./createaccount.html"> Create Account </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bx-calendar"></i>
+            <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="./sites.html" onclick="toggleVisibility('sites');">
+            <i class="bx bx-building-house"></i>
+            <span>Sites</span>
+          </a>
+        </li>
+        <li class="sidebar-submenu">
+          <a href="#" class="sidebar-menu-dropdown">
+            <i class="bx bx-cog"></i>
+            <span>settings</span>
+            <div class="dropdown-icon"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content">
+            <li>
+              <a href="#" class="darkmode-toggle" id="darkmode-toggle">
+                darkmode
+                <span class="darkmode-switch"></span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+
+    <!-- MAIN CONTENT -->
+    <div class="main" id="dashboard">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title">dashboard</div>
+      </div>
+      <div class="main-content">
+        <div class="row">
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Users</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bx-user"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Occurance Reports</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bxs-report"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">AVG Time On Duty</div>
+                <div class="counter-info">
+                  <div class="counter-count">00:00</div>
+                  <i class="bx bx-time-five"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Lorem</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bx-calendar-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-7 col-md-6 col-sm-12">
+            <!-- Time Logging -->
+            <div class="box f-height">
+              <div class="box-header">Time Logs</div>
+              <div class="box-body">
+                <ul class="dash-list">
+                  <li class="dash-list-item">
+                    <div class="item-info">
+                      <img src="./assets/img/user.png" alt="dash image" />
+                      <div class="item-name">
+                        <div class="dash-name">John Doe</div>
+                        <div class="text-second">15 Kingsway Street</div>
+                      </div>
+                    </div>
+                    <div class="item-sale-info">
+                      <div class="text-second">Time</div>
+                      <div class="dash-style">06h00 - 18h00</div>
+                    </div>
+                  </li>
+                  <li class="dash-list-item">
+                    <div class="item-info">
+                      <img src="./assets/img/user.png" alt="dash image" />
+                      <div class="item-name">
+                        <div class="dash-name">John Doe</div>
+                        <div class="text-second">15 Kingsway Street</div>
+                      </div>
+                    </div>
+                    <div class="item-sale-info">
+                      <div class="text-second">Time</div>
+                      <div class="dash-style">06h00 - 18h00</div>
+                    </div>
+                  </li>
+                  <li class="dash-list-item">
+                    <div class="item-info">
+                      <img src="./assets/img/user.png" alt="dash image" />
+                      <div class="item-name">
+                        <div class="dash-name">John Doe</div>
+                        <div class="text-second">15 Kingsway Street</div>
+                      </div>
+                    </div>
+                    <div class="item-sale-info">
+                      <div class="text-second">Time</div>
+                      <div class="dash-style">06h00 - 18h00</div>
+                    </div>
+                  </li>
+                  <li class="dash-list-item">
+                    <div class="item-info">
+                      <img src="./assets/img/user.png" alt="dash image" />
+                      <div class="item-name">
+                        <div class="dash-name">John Doe</div>
+                        <div class="text-second">15 Kingsway Street</div>
+                      </div>
+                    </div>
+                    <div class="item-sale-info">
+                      <div class="text-second">Time</div>
+                      <div class="dash-style">06h00 - 18h00</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- TOP dash -->
+          </div>
+          <!-- <div class="col-4 col-md-6 col-sm-12">
+         
+            <div class="box f-height">
+              <div class="box-body">
+                <div id="category-chart"></div>
+              </div>
+            </div>
+ 
+          </div> -->
+          <div class="col-5 col-md-12 col-sm-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <div class="box-header">Reports</div>
+              <div class="box-body">
+                <div id="customer-chart"></div>
+              </div>
+            </div>
+            <!-- END CUSTOMERS CHART -->
+          </div>
+          <div class="col-12">
+            <!-- ORDERS TABLE -->
+            <div class="box">
+              <div class="box-header">Recent Occurance Logs</div>
+              <div class="box-body overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>User ID</th>
+                      <th>Reporter</th>
+                      <th>Date</th>
+                      <th>Report Status</th>
+
+                      <th>Title</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>101010101</td>
+                      <td>
+                        <div class="order-owner">
+                          <img src="./assets/img/user.png" alt="user image" />
+                          <span>John Doe</span>
+                        </div>
+                      </td>
+                      <td>2021-09-21</td>
+                      <td>
+                        <span class="order-status order-ready">Pending</span>
+                      </td>
+                      <!-- <td>
+                        <div class="payment-status payment-pending">
+                          <div class="dot"></div>
+                          <span>Pending</span>
+                        </div>
+                      </td> -->
+                      <td>Attempted Robery at 5 Bakery Ave</td>
+                    </tr>
+                    <tr>
+                      <td>101010101</td>
+                      <td>
+                        <div class="order-owner">
+                          <img src="./assets/img/user.png" alt="user image" />
+                          <span>John doe</span>
+                        </div>
+                      </td>
+                      <td>2021-09-21</td>
+                      <td>
+                        <span class="order-status order-shipped">
+                          Resolved
+                        </span>
+                      </td>
+                      <!-- <td>
+                        <div class="payment-status payment-paid">
+                          <div class="dot"></div>
+                          <span>Paid</span>
+                        </div>
+                      </td> -->
+                      <td>Attempted Robery at 5 Bakery Ave</td>
+                    </tr>
+                    <tr>
+                      <td>101010101</td>
+                      <td>
+                        <div class="order-owner">
+                          <img src="./assets/img/user.png" alt="user image" />
+                          <span>John Doe</span>
+                        </div>
+                      </td>
+                      <td>2021-09-21</td>
+                      <td>
+                        <span class="order-status order-shipped">
+                          Resolved
+                        </span>
+                      </td>
+                      <!-- <td>
+                        <div class="payment-status payment-paid">
+                          <div class="dot"></div>
+                          <span>Paid</span>
+                        </div>
+                      </td> -->
+                      <td>Attempted Robery at 5 Bakery Ave</td>
+                    </tr>
+                    <tr>
+                      <td>101010101</td>
+                      <td>
+                        <div class="order-owner">
+                          <img src="./assets/img/user.png" alt="user image" />
+                          <span>John doe</span>
+                        </div>
+                      </td>
+                      <td>2021-09-21</td>
+                      <td>
+                        <span class="order-status order-shipped">
+                          Resolved
+                        </span>
+                      </td>
+                      <!-- <td>
+                        <div class="payment-status payment-paid">
+                          <div class="dot"></div>
+                          <span>Paid</span>
+                        </div>
+                      </td> -->
+                      <td>Attempted Robery at 5 Bakery Ave</td>
+                    </tr>
+                    <tr>
+                      <td>101010101</td>
+                      <td>
+                        <div class="order-owner">
+                          <img src="./assets/img/user.png" alt="user image" />
+                          <span>John Doe</span>
+                        </div>
+                      </td>
+                      <td>2021-09-21</td>
+                      <td>
+                        <span class="order-status order-shipped">
+                          Resolved
+                        </span>
+                      </td>
+                      <!-- <td>
+                        <div class="payment-status payment-paid">
+                          <div class="dot"></div>
+                          <span>Paid</span>
+                        </div>
+                      </td> -->
+                      <td>Attempted Robery at 5 Bakery Ave</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- END ORDERS TABLE -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MAIN CONTENT -->
+    <!-- OCCURANCE CONTENT -->
+    <div class="main" id="occuranceReports" style="display: none">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title time">Occurance Report</div>
+      </div>
+      <div class="main-content">
+        <div class="row"></div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <div class="box-header">Add Occurance</div>
+              <div class="box-body">
+                <form id="form" action="post">
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="reporter">Reporter</label>
+                    <input type="text" id="reporter" class="form-control" />
+                  </div>
+                  <label for="site">Site</label>
+                  <select id="site" name="site" class="form-control">
+                    <option value="sandton">sandton</option>
+                    <option value="braynston">braynston</option>
+                    <option value="midrand">midrand</option>
+                  </select>
+
+                  <div class="form-group">
+                    <br />
+                    <!-- <label for="author">Description Of Occurance</label> -->
+                    <textarea>Description Of Occurance: ...</textarea>
+                  </div>
+
+                  <br />
+
+                  <div class="file-upload">
+                    <div class="file-upload-select">
+                      <div class="file-select-button">Choose File</div>
+                      <div class="file-select-name">No file chosen...</div>
+                      <input
+                        type="file"
+                        name="file-upload-input"
+                        id="file-upload-input"
+                      />
+                    </div>
+                  </div>
+                  <br />
+
+                  <!-- <input
+                    type="submit"
+                    value="Add Book"
+                    class="btn btn-primary btn-block"
+                  /> -->
+                  <input type="submit" value="Submit Occurance" />
+                </form>
+              </div>
+            </div>
+            <!-- END CUSTOMERS CHART -->
+          </div>
+          <div class="col-12">
+            <!-- ORDERS TABLE -->
+            <div class="box">
+              <div class="box-header">Occurances</div>
+              <div class="box-body overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>User ID</th>
+                      <th>Reporter</th>
+                      <th>Date</th>
+                      <th>Report Status</th>
+
+                      <th>Title</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ob-reports"></tbody>
+                </table>
+              </div>
+            </div>
+            <!-- END ORDERS TABLE -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OCCURANCE CONTENT -->
+
+    <!-- GENERAL CONTENT -->
+    <div class="main" id="generalReports" style="display: none">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title general">General Reports</div>
+      </div>
+      <div class="main-content">
+        <div class="row"></div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <div class="box-header">Fill In General Report</div>
+              <div class="box-body">
+                <form id="form" action="post">
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="reporter">Reporter</label>
+                    <input type="text" id="reporter" class="form-control" />
+                  </div>
+                  <!-- <label for="site">Site</label>
+                  <select id="site" name="site" class="form-control">
+                    <option value="sandton">sandton</option>
+                    <option value="braynston">braynston</option>
+                    <option value="midrand">midrand</option>
+                  </select> -->
+
+                  <div class="form-group">
+                    <br />
+                    <!-- <label for="author">Description Of Occurance</label> -->
+                    <textarea>Description Of Report: ...</textarea>
+                  </div>
+
+                  <br />
+
+                  <!-- <div class="file-upload">
+                    <div class="file-upload-select">
+                      <div class="file-select-button">Choose File</div>
+                      <div class="file-select-name">No file chosen...</div>
+                      <input
+                        type="file"
+                        name="file-upload-input"
+                        id="file-upload-input"
+                      />
+                    </div>
+                  </div> -->
+                  <br />
+
+                  <!-- <input
+                    type="submit"
+                    value="Add Book"
+                    class="btn btn-primary btn-block"
+                  /> -->
+                  <input type="submit" value="Submit Occurance" />
+                </form>
+              </div>
+            </div>
+            <!-- END CUSTOMERS CHART -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END GENERAL CONTENT -->
+
+    <!-- Time CONTENT -->
+    <div class="main" id="timeDuty" style="display: none">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title time">Time On Duty</div>
+      </div>
+      <div class="main-content">
+        <div class="row">
+          <div class="col-6 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Clocked In</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bx-calendar"></i>
+                </div>
+              </div>
+            </div>
+            <input
+              type="submit"
+              style="background-color: teal"
+              value="Clock In"
+            />
+          </div>
+          <div class="col-6 col-md-6 col-sm-12">
+            <div class="box box-hover">
+              <div class="counter">
+                <div class="counter-title">Time</div>
+                <div class="counter-info">
+                  <div class="counter-count">00</div>
+                  <i class="bx bxs-watch-alt"></i>
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Clock Out" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <button
+                style="margin-bottom: 25px"
+                class="buttn btnAcc"
+                onclick="hideShowImageUpload()"
+              >
+                Upload Image
+              </button>
+              <div id="imageBox" style="display: none">
+                <div class="box-header">Add Image</div>
+                <div class="box-body">
+                  <form id="form" action="post">
+                    <br />
+
+                    <div class="file-upload">
+                      <div class="file-upload-select">
+                        <div class="file-select-button">Choose File</div>
+                        <div class="file-select-name">No file chosen...</div>
+                        <input
+                          type="file"
+                          name="file-upload-input"
+                          id="file-upload-input"
+                        />
+                      </div>
+                    </div>
+                    <br />
+
+                    <!-- <input
+                    type="submit"
+                    value="Add Book"
+                    class="btn btn-primary btn-block"
+                  /> -->
+                  </form>
+
+                  <img
+                    src="./assets/img/user-image-2.png"
+                    alt="Avatar"
+                    style="
+                      width: 500px;
+                      border-radius: 50%;
+                      text-align: center;
+                      margin-left: 283px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- END CUSTOMERS CHART -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Time CONTENT -->
+
+    <!-- accounts CONTENT -->
+    <div class="main" id="createAccount" style="display: none">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title accounts">Create Accounts</div>
+      </div>
+      <div class="main-content">
+        <div class="row">
+          <div class="col-12">
+            <button class="buttn btnAcc" onclick="hideShowForm()">
+              Create Account
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- ACCOUNTS CHART -->
+            <div class="box" id="accountForm" style="display: none">
+              <div class="box-header">Create An Account</div>
+              <div class="box-body">
+                <form id="form" action="post">
+                  <div class="form-group">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="fistName">Name</label>
+                    <input type="text" id="fistName" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Surname</label>
+                    <input type="text" id="lastName" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="idnumber">ID Number</label>
+                    <input type="number" id="idnumber" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="psiranumber">PSIRA no</label>
+                    <input type="text" id="psiranumber" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="profilepic">Upload Profile Pic</label>
+                    <input type="file" id="profilepic" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="contacts">Contact details</label>
+                    <input type="number" id="contacts" class="form-control" />
+                  </div>
+
+                  <br />
+                  <input type="submit" value="Submit Account" />
+                </form>
+              </div>
+            </div>
+            <!-- END ACCOUNTS CHART -->
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-header">Accounts</div>
+          <div class="box-body">
+            <div class="row">
+              <div class="col-3 col-md-6 col-sm-12">
+                <!-- New Card -->
+                <div class="card-wrap">
+                  <div class="card-header one">
+                    <img
+                      src="./assets/img/user-image-3.png"
+                      style="border-radius: 50%; height: 100px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card-content">
+                    <h1 class="card-title">John Doe</h1>
+                    <h1 class="card-title-sub">Systems Operator</h1>
+                    <p class="card-text">ID Number</p>
+                    <p class="card-text">PSIRA Number</p>
+                    <p class="card-text">Contacts</p>
+                    <button
+                      style="background-color: cadetblue"
+                      class="card-btn one"
+                    >
+                      Edit
+                    </button>
+                    <button class="card-btn one">Delete</button>
+                  </div>
+                </div>
+                <!-- end of new card -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END accounts CONTENT -->
+
+    <!-- SITES -->
+    <div class="main" id="sites" style="display: none">
+      <div class="main-header">
+        <div class="mobile-toggle" id="mobile-toggle">
+          <i class="bx bx-menu-alt-right"></i>
+        </div>
+        <div class="main-title time">Sites</div>
+      </div>
+      <div class="main-content">
+        <div class="row"></div>
+
+        <div class="row">
+          <div class="col-12">
+            <!-- CUSTOMERS CHART -->
+            <div class="box f-height">
+              <div class="box-header">Add Site</div>
+              <div class="box-body">
+                <form id="form" action="post">
+                  <div class="form-group">
+                    <label for="nameOfSite">Name Of Site</label>
+                    <input type="text" id="nameOfSite" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="typeOfSite">Type Of Site</label>
+                    <input type="text" id="typeOfSite" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address Of Site</label>
+                    <input type="text" id="address" class="form-control" />
+                  </div>
+
+                  <br />
+
+                  <input type="submit" value="Submit Site" />
+                </form>
+              </div>
+            </div>
+            <!-- END CUSTOMERS CHART -->
+          </div>
+          <div class="col-12">
+            <!-- ORDERS TABLE -->
+            <div class="box">
+              <div class="box-header">Sites</div>
+              <div class="box-body overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name Of Site</th>
+                      <th>Type Of Site</th>
+                      <th>Address Of Site</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ob-reports"></tbody>
+                </table>
+              </div>
+            </div>
+            <!-- END ORDERS TABLE -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SITES -->
+
+    <div class="overlay"></div>
+
+    <!-- SCRIPT -->
+    <!-- APEX CHART -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      var selector = '.sidebar ul li a';
+
+      $(selector).on('click', function () {
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+      });
+
+      function hideShowForm() {
+        var accForm = document.getElementById('accountForm');
+        if (accForm.style.display === 'none') {
+          accForm.style.display = 'block';
+        } else {
+          accForm.style.display = 'none';
+        }
+      }
+      function hideShowImageUpload() {
+        var imgBox = document.getElementById('imageBox');
+        if (imgBox.style.display === 'none') {
+          imgBox.style.display = 'block';
+        } else {
+          imgBox.style.display = 'none';
+        }
+      }
+    </script>
+
+    <!-- APP JS -->
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
