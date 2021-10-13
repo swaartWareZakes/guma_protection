@@ -36,6 +36,20 @@
     </style>
 
     <title>Guma Protection</title>
+    <style>
+      @media only screen and (min-width: 1224px) {
+        .button__mobi {
+          display: none;
+        }
+      }
+
+      /* Large screens ----------- */
+      @media only screen and (min-width: 1824px) {
+        .button__mobi {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <!--=============== HEADER ===============-->
@@ -53,6 +67,14 @@
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact us</a>
+            </li>
+            <li>
+              <a
+                href="./login.html"
+                style="color: whitesmoke"
+                class="button button__mobi"
+                >Sign In</a
+              >
             </li>
 
             <i class="bx bx-toggle-left change-theme" id="theme-button"></i>
