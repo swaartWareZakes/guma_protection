@@ -21,22 +21,7 @@ document.querySelectorAll('.sidebar-submenu').forEach((e) => {
   };
 });
 
-let category_options = {
-  series: [44, 55, 41, 17],
-  labels: ['Cloths', 'Devices', 'Bags', 'Watches'],
-  chart: {
-    type: 'donut',
-  },
-  colors: ['#6ab04c', '#2980b9', '#f39c12', '#d35400'],
-};
-
-let category_chart = new ApexCharts(
-  document.querySelector('#category-chart'),
-  category_options
-);
-category_chart.render();
-
-let customer_options = {
+let data_options = {
   series: [
     {
       name: 'Occurance',
@@ -66,11 +51,11 @@ let customer_options = {
   },
 };
 
-let customer_chart = new ApexCharts(
-  document.querySelector('#customer-chart'),
-  customer_options
+let data_chart = new ApexCharts(
+  document.querySelector('#data-chart'),
+  data_options
 );
-customer_chart.render();
+data_chart.render();
 
 setDarkChart = (dark) => {
   let theme = {
@@ -79,7 +64,7 @@ setDarkChart = (dark) => {
     },
   };
 
-  customer_chart.updateOptions(theme);
+  data_chart.updateOptions(theme);
   category_chart.updateOptions(theme);
 };
 
