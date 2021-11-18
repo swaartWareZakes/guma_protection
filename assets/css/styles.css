@@ -176,7 +176,16 @@ body.dark-theme {
   align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  .button__mobi {
+    display: none;
+  }
+  .nav__link {
+    padding-right: 25px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .nav__menu {
     position: fixed;
     background-color: var(--container-color);
@@ -530,7 +539,7 @@ body.dark-theme {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 800px) {
   body {
     margin: 0;
   }
