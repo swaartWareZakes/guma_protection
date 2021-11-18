@@ -176,16 +176,7 @@ body.dark-theme {
   align-items: center;
 }
 
-@media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
-  /* .button__mobi {
-    display: none;
-  } */
-  .nav__link {
-    padding-right: 25px !important;
-  }
-}
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .nav__menu {
     position: fixed;
     background-color: var(--container-color);
