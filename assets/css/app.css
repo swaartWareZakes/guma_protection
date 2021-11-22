@@ -489,6 +489,7 @@ table {
   align-items: center;
   text-transform: capitalize;
   font-weight: 500;
+  width: 160px;
 }
 
 .order-owner img {
